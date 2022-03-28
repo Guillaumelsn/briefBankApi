@@ -13,33 +13,34 @@ import lombok.Data;
 @Entity
 @Table(name = "conseiller")
 public class Conseiller {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
-	@Column(name="nomConseiller")
+
+	@Column(name = "nomConseiller")
 	private String nomConseiller;
-	
-	@Column (name="prenomConseiller")
+
+	@Column(name = "prenomConseiller")
 	private String prenomConseiller;
-	
-	@Column (name= "numeroTel")
+
+	@Column(name = "numeroTel")
 	private String numeroTel;
-	
-	@Column (name= "adresse")
+
+	@Column(name = "adresse")
 	private String adresse;
-	
-	@Column (name= "civilite")
+
+	@Column(name = "civilite")
 	private String civilite;
-	
-	@Column (name= "login")
+
+	@Column(name = "login")
 	private String login;
-	
-	@Column (name= "password")
+
+	@Column(name = "password")
 	private String password;
 
-	public Conseiller(String nomConseiller, String prenomConseiller, String numeroTel, String adresse, String civilité, String login, String password) {
+	public Conseiller(String nomConseiller, String prenomConseiller, String numeroTel, String adresse, String civilité,
+			String login, String password) {
 		this.nomConseiller = nomConseiller;
 		this.prenomConseiller = prenomConseiller;
 		this.numeroTel = numeroTel;

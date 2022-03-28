@@ -17,29 +17,29 @@ import lombok.Data;
 
 public class Client {
 
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
-	    @Column(name="raisonSociale")
-	    private String raisonSociale;
+	@Column(name = "raisonSociale")
+	private String raisonSociale;
 
-	    @Column(name="libelleClient")
-	    private String libelleClient;
+	@Column(name = "libelleClient")
+	private String libelleClient;
 
-	    @Column(name="numeroTel")
-	    private String numeroTel;
+	@Column(name = "numeroTel")
+	private String numeroTel;
 
-	    @Column(name="mail")
-	    private String mail;
-	    
-	    @Column(name="adresse")
-	    private String adresse;
-	    
-	    @Column(name="civilite")
-	    private String civilite;
-	    
-	    @Column(name="dateNaissance")
-	    private Date dateNaissance;
-	    
+	@Column(name = "mail")
+	private String mail;
+
+	@Column(name = "adresse")
+	private String adresse;
+
+	@Column(name = "civilite")
+	private String civilite;
+
+	@Column(name = "dateNaissance")
+	private Date dateNaissance;
+
 }
