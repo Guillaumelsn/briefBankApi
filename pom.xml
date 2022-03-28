@@ -8,11 +8,11 @@
 		<version>2.6.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.briefBankFront</groupId>
-	<artifactId>briefBankFront</artifactId>
+	<groupId>com.briefBankApi</groupId>
+	<artifactId>briefBankApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>briefBankFront</name>
-	<description>Projet brief Bank adaptation Front Angular</description>
+	<name>briefBankApi</name>
+	<description>Projet brief Bank adaptation API Angular</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

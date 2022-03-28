@@ -1,13 +1,13 @@
-package com.briefBankFront.briefBankFront;
+package com.briefBankApi.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BriefBankFrontApplication {
+public class BriefBankApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BriefBankFrontApplication.class, args);
+		SpringApplication.run(BriefBankApiApplication.class, args);
 	}
 
 }
