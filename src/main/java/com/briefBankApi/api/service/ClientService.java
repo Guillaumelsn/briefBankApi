@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.briefBankApi.api.service;
 
 import java.util.Optional;
@@ -13,10 +11,6 @@ import com.briefBankApi.api.repository.ClientRepository;
 import ch.qos.logback.core.net.server.Client;
 import lombok.Data;
 
-/**
- * @author marvin
- *
- */
 
 @Data
 @Service
