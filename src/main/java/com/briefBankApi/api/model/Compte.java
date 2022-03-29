@@ -44,10 +44,6 @@ public class Compte {
 	@Column(name = "id_Client")
 	protected int idClient;
 	
-//    @OneToMany
-//    @JoinColumn(name = "id_Client")
-//    private Client client;
-	
 	public Compte(int numCompte, float solde, float soldeInitial, boolean cloture, boolean typeCompte, int idClient) {
 		this.numCompte = numCompte;
 		this.solde = solde;
