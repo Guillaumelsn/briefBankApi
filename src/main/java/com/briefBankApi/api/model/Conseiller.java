@@ -18,13 +18,13 @@ public class Conseiller {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(name = "nomConseiller")
+	@Column(name = "nom_conseiller")
 	private String nomConseiller;
 
-	@Column(name = "prenomConseiller")
+	@Column(name = "prenom_conseiller")
 	private String prenomConseiller;
 
-	@Column(name = "numeroTel")
+	@Column(name = "numero_tel")
 	private String numeroTel;
 
 	@Column(name = "adresse")
@@ -38,15 +38,4 @@ public class Conseiller {
 
 	@Column(name = "password")
 	private String password;
-
-	public Conseiller(String nomConseiller, String prenomConseiller, String numeroTel, String adresse, String civilité,
-			String login, String password) {
-		this.nomConseiller = nomConseiller;
-		this.prenomConseiller = prenomConseiller;
-		this.numeroTel = numeroTel;
-		this.adresse = adresse;
-		this.civilite = civilité;
-		this.login = login;
-		this.password = password;
-	}
 }

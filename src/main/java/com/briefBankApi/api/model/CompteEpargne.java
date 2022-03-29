@@ -5,6 +5,7 @@ package com.briefBankApi.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -15,29 +16,15 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name = "comptecourant")
+@Table(name = "compteepargne")
+@PrimaryKeyJoinColumn(name = "id")
 public class CompteEpargne extends Compte {
+
+	private static final long serialVersionUID = 1L;
 
 	@Column(name = "plafond")
 	private float plafond;
 	
-	@Column(name = "tauxInteret")
+	@Column(name = "taux_interet")
 	private float tauxInteret;
-	
-	/**
-	 * Constructeur de CompteEpargne, hérite des propriétés du parent pour l'instancier avec toutes les informations
-	 * @param id
-	 * @param numCompte
-	 * @param solde
-	 * @param soldeInitial
-	 * @param cloture
-	 * @param typeCompte
-	 * @param plafond
-	 * @param tauxInteret
-	 */
-	public CompteEpargne(int numCompte, float solde, float soldeInitial, boolean cloture, boolean typeCompte, int idClient, float plafond, float tauxInteret) {
-		super(numCompte, solde, soldeInitial, cloture, typeCompte, idClient);
-		this.plafond = plafond;
-		this.tauxInteret = tauxInteret;
-	}
 }

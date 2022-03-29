@@ -2,11 +2,15 @@
  * 
  */
 package com.briefBankApi.api.model;
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -21,35 +25,30 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "compte")
-public class Compte {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Compte implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected int id;
 	
-	@Column(name = "numeroCompte")
+	@Column(name = "numero_compte")
 	protected Integer numCompte;
 	
 	@Column(name = "solde")
 	protected float solde;
 	
-	@Column(name = "soldeInitial")
+	@Column(name = "solde_initial")
 	protected float soldeInitial;
 
 	@Column(name = "cloture")
 	protected boolean cloture;
 	
-	@Column(name = "typeCompte")
+	@Column(name = "type_compte")
 	protected boolean typeCompte;
 	
-	@Column(name = "id_Client")
-	protected int idClient;
-	
-	public Compte(int numCompte, float solde, float soldeInitial, boolean cloture, boolean typeCompte, int idClient) {
-		this.numCompte = numCompte;
-		this.solde = solde;
-		this.soldeInitial = soldeInitial;
-		this.cloture = cloture;
-		this.typeCompte = typeCompte;
-		this.idClient = idClient;
-	}
+	@ManyToOne
+	@JoinColumn( name="id_client" )
+	private Client client;
 }
