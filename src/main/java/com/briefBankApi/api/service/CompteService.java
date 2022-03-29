@@ -27,7 +27,7 @@ public class CompteService {
     @Autowired
     private CompteEpargneRepository compteEpargneRepository;
 
-    public Optional<Compte> getCompte(final Integer id) {
+    public Optional<Compte> getCompte(final Long id) {
         return compteRepository.findById(id);
     }
 
@@ -35,7 +35,7 @@ public class CompteService {
         return compteRepository.findAll();
     }
 
-    public void deleteCompte(final Integer id) {
+    public void deleteCompte(final Long id) {
     	compteRepository.deleteById(id);
     }
 

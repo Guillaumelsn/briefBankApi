@@ -17,7 +17,7 @@ public class ClientService {
 	@Autowired
 	private ClientRepository clientRepository;
 	
-	public Optional<Client> getClientById (final Integer id) {
+	public Optional<Client> getClientById (final Long id) {
 		return clientRepository.findById(id);
 		
 	}

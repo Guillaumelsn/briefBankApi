@@ -3,7 +3,7 @@
  */
 package com.briefBankApi.api.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +15,6 @@ import com.briefBankApi.api.model.Compte;
  */
 @NoRepositoryBean
 @Repository
-public interface CompteEpargneRepository extends JpaRepository<Compte, Integer>{
+public interface CompteEpargneRepository extends CrudRepository<Compte, Long>{
 
 }
