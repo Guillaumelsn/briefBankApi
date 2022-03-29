@@ -1,0 +1,48 @@
+.container {
+width: 33%;
+height: 500px;
+margin: 0 auto;
+background-color: aqua;
+padding: 30px;
+position: relative;
+background-image: url(https://images-ext-2.discordapp.net/external/sI1MomNIlP7LZoBvZueat-KT0O63mTvHORDpHH-GD18/%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D2%26h%3D650%26w%3D940/https/images.pexels.com/photos/844124/pexels-photo-844124.jpeg?width=1728&height=1065);
+background-size: cover;
+background-position: bottom center;
+
+    .contain {
+        background-color: rgba(0, 0, 0, 0.60);
+        color: white;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        border-radius: 25px;
+
+        h1 {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            li {
+                width: 50%;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                &:nth-of-type(5){
+                    width: 100%;
+                }
+                &:nth-of-type(6){
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
