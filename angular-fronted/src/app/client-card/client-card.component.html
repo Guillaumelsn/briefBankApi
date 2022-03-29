@@ -8,15 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" *ngFor="let item of clients">
         <div class="contain">
             <h1>Fiche client</h1>
             <ul>
-                <li><p>Miro</p></li>
-                <li><p>Backer</p></li>
-                <li><p>Téléphone</p></li>
-                <li><p>Email</p></li>
-                <li><p>Adresse postale</p></li>
+                <li>{{ item.raison_Sociale }}</li>
+                <li>{{ item.libelle_Client }}</li>
+                <li>{{ item.numero_Tel }}</li>
+                <li>{{ item.mail }}</li>
+                <li>{{ item.adresse }}</li>
                 <li><p>Nom du conseiller</p></li>
             </ul>
         </div>
@@ -24,10 +24,7 @@
 </body>
 </html>
 
-<!-- <ul *ngFor="let item of clients">
-    <li>{{ item.id }}</li>
-    <li>{{ item.raison_Sociale }}</li>
-    <li>{{ item.libelle_Client }}</li>
-    <li>{{ item.numero_Tel }}</li>
-</ul> -->
+
+
+
 
