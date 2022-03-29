@@ -19,7 +19,7 @@ public class Client {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 
 	@Column(name = "raisonSociale")
 	private String raisonSociale;
@@ -41,5 +41,8 @@ public class Client {
 
 	@Column(name = "dateNaissance")
 	private Date dateNaissance;
+	
+	@Column(name = "id_Conseiller")
+	private Integer idConseiller;
 
 }

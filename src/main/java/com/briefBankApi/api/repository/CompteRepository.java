@@ -18,4 +18,6 @@ import com.briefBankApi.api.model.Compte;
 public interface CompteRepository extends CrudRepository<Compte, Integer> {
 
 	public List<Compte> findByCloture(boolean statut);
+	
+	public Compte findTopByOrderByIdDesc();
 }

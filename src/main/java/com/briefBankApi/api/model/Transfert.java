@@ -25,11 +25,11 @@ public class Transfert implements Serializable {
 
 	@Id
 	@Column (name="idCompteDebiteur")
-	private int idCompteDebiteur;
+	private Integer idCompteDebiteur;
 	
 	@Id
 	@Column (name="idCompteCredite")
-	private int idCompteCredite;
+	private Integer idCompteCredite;
 	
 	@Column (name="montant")
 	private float montant;

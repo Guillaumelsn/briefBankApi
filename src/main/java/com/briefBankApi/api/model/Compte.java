@@ -27,7 +27,7 @@ public class Compte {
 	protected int id;
 	
 	@Column(name = "numeroCompte")
-	protected int numCompte;
+	protected Integer numCompte;
 	
 	@Column(name = "solde")
 	protected float solde;

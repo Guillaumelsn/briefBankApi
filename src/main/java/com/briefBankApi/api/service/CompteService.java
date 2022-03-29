@@ -7,7 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.briefBankApi.api.model.Compte;
+import com.briefBankApi.api.model.CompteCourant;
+import com.briefBankApi.api.model.CompteEpargne;
 import com.briefBankApi.api.model.CompteStatut;
+import com.briefBankApi.api.repository.CompteCourantRepository;
+import com.briefBankApi.api.repository.CompteEpargneRepository;
 import com.briefBankApi.api.repository.CompteRepository;
 
 import lombok.Data;
@@ -17,6 +21,12 @@ import lombok.Data;
 public class CompteService {
     @Autowired
     private CompteRepository compteRepository;
+    
+    @Autowired
+    private CompteCourantRepository compteCourantRepository;
+    
+    @Autowired
+    private CompteEpargneRepository compteEpargneRepository;
 
     public Optional<Compte> getCompte(final Integer id) {
         return compteRepository.findById(id);
@@ -35,7 +45,21 @@ public class CompteService {
         return savedCompte;
     }
     
+    public Compte saveCompteCourant(CompteCourant compte) {
+        CompteCourant savedCompte = compteCourantRepository.save(compte);
+        return savedCompte;
+    }
+    
+    public Compte saveCompteEpargne(CompteEpargne compte) {
+        CompteEpargne savedCompte = compteEpargneRepository.save(compte);
+        return savedCompte;
+    }
+    
     public List<Compte> getAllActiveComptes(){
     	return compteRepository.findByCloture(CompteStatut.ACTIF.getStatut());
+    }
+    
+    public Compte getLastCompte() {
+    	return compteRepository.findTopByOrderByIdDesc();
     }
 }
