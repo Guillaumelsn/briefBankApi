@@ -81,8 +81,6 @@ public class Conseiller {
 		this.password = password;
 	}
 
-
-
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -96,6 +94,6 @@ public class Conseiller {
 	private String login;
 	
 	@Column (name="password")
+  
 	private String password;
-
 }
