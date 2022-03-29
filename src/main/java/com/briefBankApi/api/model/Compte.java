@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -24,7 +27,7 @@ public class Compte {
 	protected int id;
 	
 	@Column(name = "numeroCompte")
-	protected int numCompte;
+	protected Integer numCompte;
 	
 	@Column(name = "solde")
 	protected float solde;
@@ -40,10 +43,6 @@ public class Compte {
 	
 	@Column(name = "id_Client")
 	protected int idClient;
-	
-//    @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
 	
 	public Compte(int numCompte, float solde, float soldeInitial, boolean cloture, boolean typeCompte, int idClient) {
 		this.numCompte = numCompte;
