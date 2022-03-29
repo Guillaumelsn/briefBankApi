@@ -1,12 +1,14 @@
 package com.briefBankApi.api.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.stereotype.Repository;
 
-import ch.qos.logback.core.net.server.Client;
+import com.briefBankApi.api.model.Client;
 
+@NoRepositoryBean
 @Repository
-public interface ClientRepository extends CrudRepository<Client, Integer> {
+public interface ClientRepository extends JpaRepository<Client, Integer> {
 	
 
 }

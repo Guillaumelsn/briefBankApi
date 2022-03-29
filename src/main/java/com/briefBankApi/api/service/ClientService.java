@@ -2,13 +2,11 @@
 package com.briefBankApi.api.service;
 
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.briefBankApi.api.model.Client;
 import com.briefBankApi.api.repository.ClientRepository;
-
-import ch.qos.logback.core.net.server.Client;
 import lombok.Data;
 
 

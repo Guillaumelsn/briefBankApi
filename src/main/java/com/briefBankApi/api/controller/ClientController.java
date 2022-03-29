@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.briefBankApi.api.model.Client;
 import com.briefBankApi.api.service.ClientService;
-
-import ch.qos.logback.core.net.server.Client;
 
 
 @RestController
