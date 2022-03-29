@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"com.briefBankApi.api.repository.ClientRepository"})
-@EnableJpaRepositories("com.briefBankApi.api.repository")
+@ComponentScan({ "com.briefBankApi.api.repository.*", "com.briefBankApi.api.controller.*", "com.briefBankApi.api.service.*",
+		"com.briefBankApi.api.model.*" })
 public class BriefBankApiApplication {
 
 	public static void main(String[] args) {
