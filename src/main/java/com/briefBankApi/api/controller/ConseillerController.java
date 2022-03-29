@@ -13,7 +13,7 @@ import com.briefBankApi.api.service.ConseillerService;
 @CrossOrigin
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/")
 public class ConseillerController {
 
     @Autowired

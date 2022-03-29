@@ -1,4 +1,4 @@
---INSERT INTO conseillers (id,nomConseiller,prenomConseiller,login,password) VALUES
+--INSERT INTO conseillers (id,nom_Conseiller,prenom_Conseiller,login,password) VALUES
 --  ('1','Coty','Rene','Crene','monami'),
 --  ('2','Faure','Felix','Ffelix','pompe'),
 --  ('3','Auriol','Vincent','Avincent','random');
@@ -8,14 +8,14 @@ DROP TABLE IF EXISTS conseillers;
 
 CREATE TABLE conseillers (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	nomConseiller VARCHAR(250) NOT NULL,
-	prenomConseiller VARCHAR(250) NOT NULL,
+	nom_Conseiller VARCHAR(250) NOT NULL,
+	prenom_Conseiller VARCHAR(250) NOT NULL,
 	login VARCHAR(250) NOT NULL,
 	password  VARCHAR(250) NOT NULL
 );
 
 
-INSERT INTO conseillers (ID,nomConseiller,prenomConseiller,login,password) VALUES
+INSERT INTO conseillers (ID,nom_Conseiller,prenom_Conseiller,login,password) VALUES
   ('1','Coty','Rene','Crene','monami'),
   ('2','Faure','Felix','Ffelix','pompe'),
   ('3','Auriol','Vincent','Avincent','random');

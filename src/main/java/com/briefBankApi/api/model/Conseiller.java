@@ -18,15 +18,25 @@ public class Conseiller {
 	
 
 	public Conseiller(int id,
-			String nomConseiller,
-			String prenomConseiller, String login,
+			String nom_Conseiller,
+			String prenom_Conseiller, String login,
 			String password) {
 		super();
 		this.id = id;
-		this.nomConseiller = nomConseiller;
-		this.prenomConseiller = prenomConseiller;
+		this.nom_Conseiller = nom_Conseiller;
+		this.prenom_Conseiller = prenom_Conseiller;
 		this.login = login;
 		this.password = password;
+	}
+
+
+	public String getLogin() {
+		return login;
+	}
+
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 
@@ -38,48 +48,49 @@ public class Conseiller {
 		this.id = id;
 	}
 
-	public String getNomConseiller() {
-		return nomConseiller;
+	
+
+	public String getNom_Conseiller() {
+		return nom_Conseiller;
 	}
+
 
 	public void
-			setNomConseiller(String nomConseiller) {
-		this.nomConseiller = nomConseiller;
+			setNom_Conseiller(String nom_Conseiller) {
+		this.nom_Conseiller = nom_Conseiller;
 	}
 
-	public String getPrenomConseiller() {
-		return prenomConseiller;
+
+	public String getPrenom_Conseiller() {
+		return prenom_Conseiller;
 	}
 
-	public void setPrenomConseiller(
-			String prenomConseiller) {
-		this.prenomConseiller = prenomConseiller;
+
+	public void setPrenom_Conseiller(
+			String prenom_Conseiller) {
+		this.prenom_Conseiller = prenom_Conseiller;
 	}
 
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
 
 	public String getPassword() {
 		return password;
 	}
 
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
+
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="nomConseiller")
-	private String nomConseiller;
+	@Column(name="nom_Conseiller")
+	private String nom_Conseiller;
 	
-	@Column (name="prenomConseiller")
-	private String prenomConseiller;
+	@Column (name="prenom_Conseiller")
+	private String prenom_Conseiller;
 	
 	@Column (name="login")
 	private String login;
